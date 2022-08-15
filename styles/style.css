@@ -1,0 +1,463 @@
+
+*{
+    margin: 0px;
+    padding:0px;
+}
+/* ------------------- GRILLA GRAL ------------------- */
+
+.body_index{
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+/* ------------------- HEADER -------------------  */
+
+header{
+    background-color: #BEDCDA;
+
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: "logo contenido nada";
+}
+
+header li a{
+    color: #F1F2ED;
+    background-color: #353535;
+
+    font-size: 16px;
+    padding: 10px;
+    text-decoration:none;
+}
+
+header li{
+    display:inline-block;
+    text-align:center;
+
+}
+
+.search_botones{
+    grid-area: contenido;
+
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "search" "botones";
+    justify-self: center;
+}
+
+.boton_search{
+    background-color: #353535;
+    color: #F1F2ED;
+    margin-left: 2%;
+}
+
+.search{
+    text-align: center;
+    grid-area: search;
+
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-top: 2%;
+}
+
+nav{
+    grid-area: botones;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.contenedor_logo{
+    grid-area: logo;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+}
+
+/* ------------------- INFORMACIÓN / TEXTOS ------------------- */
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    color: #353535;
+}
+
+h2{
+    font-size: 26px;
+
+    display: flex;
+    justify-content: left;
+    padding-top: 2%;
+    margin-left: 7%;
+
+    grid-area: titulo;
+}
+
+h3{
+    font-size: 20px;
+}
+
+p{
+    font-size: 16px;
+    text-align: left;
+
+    margin-top: 2%;
+}
+
+.caja_texto{
+
+    margin-left: 7%;
+    margin-right: 1%;
+    margin-bottom: 5%;
+
+    display: inline-block;
+}
+
+.subt_centrado{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.caja_centrada{
+    margin-bottom: 50px;
+    background-color: #FCF6E8;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.precio{
+    color:#2FAD1A ;
+}
+
+.info_wpp{
+    margin-left: 80px;
+    margin-bottom: 30px;
+    background-color: #F6EEDA;
+}
+
+.info_mail{
+   margin-bottom: 20px;
+}
+
+/* ------------------- FORMULARIO ------------------- */
+
+.formulario{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+form{
+    background-color: #FCF6E8;
+}
+
+.selec{
+    background-color: #F4EBD2;
+}
+
+.complet{
+    background-color: #F4EBD2;
+}
+
+.boton_enviar{
+    background-color: #353535;
+    color: #F4EBD2;
+}
+
+.dato-form{
+    margin-bottom: 10px;
+}
+
+.titulo-form{
+    margin-bottom: 20px;
+}
+
+/* ------------------- IMÁGENES ------------------- */
+
+.logo__fcasa{
+    height: 157px;
+    width: 227px;
+
+    margin-right: 30px;
+}
+
+.logo__fminera{
+    height: 157px;
+    width: 227px;
+}
+
+.foto__carrusel__1{
+
+    height: 338px;
+    width: 506px;
+}
+
+.logo-diatoland{
+    height: 110px;
+    width: 95px;
+}
+
+.foto__producto{
+    height: 226px;
+    width: 226px;
+}
+
+.icono_wpp{
+    height: 70px;
+    width: 70px;
+}
+
+.icono_mail{
+    height: 50px;
+    width: 50px;
+}
+
+/* ------------------- FOOTER ------------------- */
+
+footer{
+    background-color: #353535;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div{
+    display: inline-block;
+
+    padding: 1%;
+    margin: 1%;
+    text-align: left;
+}
+
+.op_footer{
+    background-color: #353535;
+    color: #DFF2F1;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer input{
+    background-color: #DFF2F1;
+    color: #353535;
+    margin-top: 3%;
+}
+
+/* ------------------- GRILLAS INDEX ------------------- */
+
+.main_index{
+    display: grid;
+    grid-template-rows: 10% 30% 90%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "titulo nada"
+    "contenido_1 img_logos"
+    "contenido_2 carrusel"
+    ;
+
+    row-gap: 1%;
+}
+
+.contenido_index_1{
+    grid-area: contenido_1;
+
+}
+
+.contenido_index_2{
+    grid-area: contenido_2;
+
+}
+
+.imagenes_index_logos{
+    grid-area: img_logos;
+
+    margin-right: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+}
+
+.imagenes_index_carrusel{
+    grid-area: carrusel;
+
+    margin-right: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+}
+
+/* ------------------- RESPONSIVE INDEX de 1199 a 768 ------------------- */
+
+@media (max-width: 1199px){
+
+    .body_index{
+        display: grid;
+        grid-template-rows: 10% 160% 10%;
+        grid-template-areas: "header" "main" "footer";
+    }
+
+    .main_index{
+        display: grid;
+        grid-template-rows: 3% 25% 51%;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "titulo"
+        "contenido_1"
+        "contenido_2"
+        ;  
+        row-gap: 1%;
+    }
+
+    .contenido_index_1{
+        grid-area: contenido_1;
+    
+    }
+    
+    .contenido_index_2{
+        grid-area: contenido_2;
+    
+    }
+    
+    .imagenes_index_logos{
+        grid-area: contenido_1;
+    
+        margin-right: 0%;
+    
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
+        margin-bottom: 1%;
+    
+    }
+    
+    .imagenes_index_carrusel{
+        grid-area: contenido_2;
+    
+        margin-right: 0%;
+    
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
+        margin-right: 0%;
+    
+    }
+
+    h2{
+        margin-left: 4%;
+    }
+
+    .caja_texto{
+        margin-left: 4%;
+    }
+} 
+
+/* ------------------- RESPONSIVE INDEX de 767 a 320 ------------------- */
+
+@media (max-width: 767px){
+
+    .body_index{
+        display: grid;
+        grid-template-rows: 10% 160% 10%;
+        grid-template-areas: "header" "main" "footer";
+    }
+
+    .main_index{
+        display: grid;
+        grid-template-rows: 3% 25% 51%;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "titulo"
+        "contenido_1"
+        "contenido_2"
+        ;  
+        row-gap: 1%;
+    }
+
+    .contenido_index_1{
+        grid-area: contenido_1;
+    
+    }
+    
+    .contenido_index_2{
+        grid-area: contenido_2;
+    
+    }
+    
+    .imagenes_index_logos{
+        grid-area: contenido_1;
+    
+        margin-right: 0%;
+    
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
+        margin-bottom: 1%;
+    
+    }
+    
+    .imagenes_index_carrusel{
+        grid-area: contenido_2;
+    
+        margin-right: 0%;
+    
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
+        margin-right: 0%;
+    
+    }
+    
+    header li a{
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .logo-diatoland{
+        height: 100px;
+        width: 85px;
+    }
+
+    .op_footer{
+        font-size: 8px;
+    }
+
+    footer input{
+        font-size: 10px;
+    }
+
+    h2{
+        margin-left: 3%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .caja_texto{
+        margin-left: 3%;
+    }
+    
+} 
