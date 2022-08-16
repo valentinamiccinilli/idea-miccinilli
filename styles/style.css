@@ -158,6 +158,43 @@ p{
    margin-bottom: 20px;
 }
 
+.card_producto{
+    margin-bottom: 1%;
+}
+
+.realizar_pedido{
+    grid-area: nada;
+    margin-right: 20%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; 
+}
+
+
+.boton_realizar_pedido{
+
+    color: #BEDCDA;
+    text-decoration: none;
+
+    font-size: 20px;
+
+    background-color: #353535;
+    border: solid 1px #353535;
+    border-radius: 5%;
+    /* no se porque no me hace el radio bien */
+
+    width: 226px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
 /* ------------------- FORMULARIO ------------------- */
 
 .formulario{
@@ -461,3 +498,95 @@ footer input{
     }
     
 } 
+
+
+/* ------------------- GRILLAS PRODUCTOS ------------------- */
+
+.main_productos{
+    display: grid;
+    grid-template-rows: 10% 40% 40%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "titulo nada"
+    "contenido_1 contenido_2"
+    "contenido_3 contenido_4"
+    ;
+
+    row-gap: 1%;
+}
+
+.uno{
+    grid-area: contenido_1;
+    margin-bottom: 20%;
+
+}
+
+.dos{
+    grid-area: contenido_2;
+    margin-bottom: 20%;
+
+}
+
+.tres{
+    grid-area: contenido_3;
+
+}
+
+.cuatro{
+    grid-area: contenido_4;
+
+}
+
+/* ------------------- ANIMACIONES ------------------- */
+
+.boton_nav:hover{
+    background-color: black;
+}
+
+.boton_search:hover{
+    background-color: black;
+}
+
+.op_footer:hover{
+    color: #BEDCDA;
+}
+
+footer input:hover{
+    background-color: #BEDCDA;
+}
+
+.boton_realizar_pedido:hover{
+    background-color: black;
+
+    transform: scale(105%);
+}
+
+.boton_realizar_pedido{
+    animation-name: boton-pedido;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes boton-pedido {
+
+    25%{
+        transform: scale(110%);
+
+    }
+
+    50%{
+
+        transform: scale(100%);
+    }
+
+    75%{
+        transform: scale(110%);
+
+    }
+
+    100%{
+
+        transform: scale(100%);
+    }
+    
+}
