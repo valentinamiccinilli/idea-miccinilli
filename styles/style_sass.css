@@ -155,13 +155,13 @@ footer div input {
   align-items: center;
   justify-content: center;
 }
-.correo_metodo {
+.correo .metodo_correo {
   margin-left: 8rem;
   margin-right: 8rem;
   padding-top: 1rem;
   margin-bottom: 2rem;
 }
-.correo_metodo p {
+.correo .metodo_correo p {
   text-align: center;
 }
 
@@ -171,14 +171,14 @@ footer div input {
   align-items: center;
   justify-content: center;
 }
-.retiro_metodo {
+.retiro .metodo_retiro {
   margin-left: 10rem;
   margin-right: 10rem;
   padding-top: 1rem;
   margin-bottom: 2rem;
 }
-.retiro_metodo p {
+.retiro .metodo_retiro p {
   text-align: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style_sass.css.map */

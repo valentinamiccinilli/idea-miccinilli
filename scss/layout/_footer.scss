@@ -1,0 +1,40 @@
+/* ------------------- FOOTER ------------------- */
+
+footer{
+    background-color: #353535;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        display: inline-block;
+    
+        padding: 1rem;
+        margin: 1rem;
+        text-align: left;  
+        
+        
+        .op_footer{
+            background-color: #353535;
+            color: #DFF2F1;
+            font-size: 0.9rem;
+            text-decoration: none;
+         }
+    
+        input{
+            background-color: #DFF2F1;
+            color: #353535;
+            margin-top: 0.5rem;
+            padding: 0.1rem;
+            border-radius: 5px;
+    
+            display: flex;
+        }
+    }
+}
+
+
+
+
+

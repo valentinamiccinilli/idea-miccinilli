@@ -1,0 +1,43 @@
+.correo{
+    grid-area: contenido_1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_metodo{
+        margin-left: 8rem;
+        margin-right: 8rem;
+        padding-top: 1rem;
+        
+        margin-bottom: 2rem;  
+    
+        p{
+            text-align: center;
+        }
+    }
+}
+
+.retiro{
+    grid-area: contenido_2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_metodo{
+        margin-left: 10rem;
+        margin-right: 10rem;
+        padding-top: 1rem;
+        
+        margin-bottom: 2rem;
+    
+        p{
+            text-align: center;
+        }
+    }
+    
+}
+
+
+
+
+
