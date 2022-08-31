@@ -17,6 +17,26 @@
     }
 }
 
+// .retiro{
+//     grid-area: contenido_2;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     &_metodo{
+//         margin-left: 10rem;
+//         margin-right: 10rem;
+//         padding-top: 1rem;
+        
+//         margin-bottom: 2rem;
+    
+//         p{
+//             text-align: center;
+//         }
+//     }
+    
+// }
+
 .retiro{
     grid-area: contenido_2;
     display: flex;
@@ -24,11 +44,10 @@
     justify-content: center;
 
     &_metodo{
-        margin-left: 10rem;
-        margin-right: 10rem;
-        padding-top: 1rem;
-        
-        margin-bottom: 2rem;
+
+        @extend .correo_metodo;
+        margin-left: 10;
+        margin-right: 10;
     
         p{
             text-align: center;
@@ -36,7 +55,6 @@
     }
     
 }
-
 
 
 

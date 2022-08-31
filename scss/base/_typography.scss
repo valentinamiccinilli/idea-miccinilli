@@ -3,7 +3,7 @@ body{
     color: #353535;
 }
 
-h2{
+h1{
     font-size: 1.6rem;
 
     display: flex;
@@ -26,13 +26,20 @@ p{
     margin-top: 1rem;
 }
 
-.caja_centrada{
+
+@mixin cajas-centradas {
     margin-bottom: 2rem;
-    background-color:$color-cards;
+    // background-color:$color-cards;
+    background-color: map-get($colores_componentes,"cards");
     margin-left: 4rem;
     margin-right: 4rem;
 
     border-radius: 15px;
+}
+
+
+.caja_centrada{
+    @include cajas-centradas();
 }
 
 .subt_centrado{

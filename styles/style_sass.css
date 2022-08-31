@@ -12,7 +12,7 @@ body {
   color: #353535;
 }
 
-h2 {
+h1 {
   font-size: 1.6rem;
   display: flex;
   justify-content: left;
@@ -155,13 +155,13 @@ footer div input {
   align-items: center;
   justify-content: center;
 }
-.correo .metodo_correo {
+.correo_metodo, .retiro_metodo {
   margin-left: 8rem;
   margin-right: 8rem;
   padding-top: 1rem;
   margin-bottom: 2rem;
 }
-.correo .metodo_correo p {
+.correo_metodo p, .retiro_metodo p {
   text-align: center;
 }
 
@@ -171,13 +171,11 @@ footer div input {
   align-items: center;
   justify-content: center;
 }
-.retiro .metodo_retiro {
-  margin-left: 10rem;
-  margin-right: 10rem;
-  padding-top: 1rem;
-  margin-bottom: 2rem;
+.retiro_metodo {
+  margin-left: 10;
+  margin-right: 10;
 }
-.retiro .metodo_retiro p {
+.retiro_metodo p {
   text-align: center;
 }
 
