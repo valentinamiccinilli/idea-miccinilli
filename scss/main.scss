@@ -1,9 +1,14 @@
 @import "./utils/variables";
 @import "./base/reset";
-@import "./base/typography";
+@import "./base/cross_page";
 @import "./layout/grid";
-@import "./layout/header";
-@import "./layout/navigation";
+@import "./layout/header_nav";
 @import "./layout/footer";
 @import "./pages/envios";
+@import "./pages/pagos";
+@import "./pages/index";
+@import "./pages/productos";
+@import "./pages/aplicaciones";
+@import "./pages/contacto";
+
 

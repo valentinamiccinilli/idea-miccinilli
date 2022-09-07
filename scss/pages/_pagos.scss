@@ -1,6 +1,6 @@
-/* ------------------- GRILLA ENVIOS ------------------- */
+/* ------------------- GRILLAS PAGOS ------------------- */
 
-.main_envios{
+.main_pagos{
     display: grid;
     grid-template-rows: 0.2fr 1fr 1fr;
     grid-template-areas:
@@ -10,40 +10,38 @@
     ;
 
     row-gap: 0.5rem;
-}
+  }
 
+  /* ------------------- GRAL ------------------- */
 
-/* ------------------- GRAL ------------------- */
-
-.correo{
+.mp{
     grid-area: contenido_1;
    
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &_metodo{
+    &_medio{
 
         margin-left: 2rem;
         margin-right: 2rem;
         padding-top: 1rem;
         
         margin-bottom: 2rem;
-
     }
 
-    .correo_metodo p{
+    .mp_medio p{
         text-align: center;
       }
 }
   
-.retiro{
+.transfer{
     grid-area: contenido_2;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &_metodo{
+    &_medio{
 
         margin-left: 2rem;
         margin-right: 2rem;
@@ -53,20 +51,19 @@
         
     }
 
-    .retiro_metodo p{
+    .transfer_medio p{
         text-align: center;
       }
   
 }
-
 
 /* -------------------------------------------------- */
 /* ------------------- RESPONSIVE ------------------- */
 
 @media (max-width: 600px){
 
-    .correo{
-        &_metodo{
+    .mp{
+        &_medio{
     
             margin-left: 1rem;
             margin-right: 1rem;
@@ -76,13 +73,13 @@
     
         }
     
-        .correo_metodo p{
+        .mp_medio p{
             text-align: left;
           }
     }
       
-    .retiro{
-        &_metodo{
+    .transfer{
+        &_medio{
     
             margin-left: 1rem;
             margin-right: 1rem;
@@ -92,10 +89,15 @@
             
         }
     
-        .retiro_metodo p{
+        .transfer_medio p{
             text-align: left;
           }
       
     }
 }
 
+
+
+  
+ 
+  

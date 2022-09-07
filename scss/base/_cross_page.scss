@@ -1,18 +1,41 @@
+/* ------------------- GRILLA GRAL ------------------- */
+
 body{
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    grid-template-areas: "header" "main" "footer";
+
     font-family: Helvetica, Arial, sans-serif;
     color: #353535;
 }
 
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+
+/* ------------------- ETIQUETAS CROSS PAGE ------------------- */
+
+
 h1{
     font-size: 1.6rem;
 
-    display: flex;
-    justify-content: left;
     padding-top: 2rem;
     margin-left: 4rem;
     margin-bottom: 1rem;
 
     grid-area: titulo;
+}
+
+h2{
+    font-size: 1.25rem;
 }
 
 h3{
@@ -26,8 +49,7 @@ p{
     margin-top: 1rem;
 }
 
-
-@mixin cajas-centradas {
+.caja_centrada{
     margin-bottom: 2rem;
     // background-color:$color-cards;
     background-color: map-get($colores_componentes,"cards");
@@ -35,11 +57,6 @@ p{
     margin-right: 4rem;
 
     border-radius: 15px;
-}
-
-
-.caja_centrada{
-    @include cajas-centradas();
 }
 
 .subt_centrado{

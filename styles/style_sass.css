@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -7,19 +8,38 @@ html {
   font-size: 1rem;
 }
 
+/* ------------------- GRILLA GRAL ------------------- */
 body {
+  display: grid;
+  grid-template-rows: 0.5fr 3fr 0.5fr;
+  grid-template-areas: "header" "main" "footer";
   font-family: Helvetica, Arial, sans-serif;
   color: #353535;
 }
 
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* ------------------- ETIQUETAS CROSS PAGE ------------------- */
 h1 {
   font-size: 1.6rem;
-  display: flex;
-  justify-content: left;
   padding-top: 2rem;
   margin-left: 4rem;
   margin-bottom: 1rem;
   grid-area: titulo;
+}
+
+h2 {
+  font-size: 1.25rem;
 }
 
 h3 {
@@ -46,26 +66,12 @@ p {
   margin-bottom: 1rem;
 }
 
-/* ------------------- GRILLA GRAL ------------------- */
-.body_index {
-  display: grid;
-  grid-template-rows: 0.5fr 6fr 0.5fr;
-  grid-template-areas: "header" "main" "footer";
-}
-
-/* ------------------- GRILLA ENVIOS ------------------- */
-.main_envios {
-  display: grid;
-  grid-template-rows: 0.5fr 1fr 1fr;
-  grid-template-areas: "titulo" "contenido_1" "contenido_2";
-  row-gap: 0.5rem;
-}
-
 header {
   background-color: #BEDCDA;
   display: grid;
   grid-template-columns: 0.5fr 3.5fr 0.5fr;
   grid-template-areas: "logo contenido nada";
+  /* ------ LOGO ------ */
 }
 header .search_botones {
   grid-area: contenido;
@@ -73,6 +79,8 @@ header .search_botones {
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "search" "botones";
   justify-self: center;
+  /* ------ SEARCH ------ */
+  /* ------ NAV ------ */
 }
 header .search_botones .search {
   text-align: center;
@@ -88,31 +96,26 @@ header .search_botones .search .boton_search {
   border-radius: 3px;
   padding: 2px;
 }
-header .contenedor_logo {
-  grid-area: logo;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header .search_botones .search .input_search {
+  border-radius: 5px;
+  background-color: #DFF2F1;
+  height: 1.2rem;
+  width: 10rem;
 }
-header .contenedor_logo .logo-diatoland {
-  height: 110px;
-  margin-top: 0.5rem;
-}
-
-nav {
+header .search_botones nav {
   grid-area: botones;
   display: flex;
   align-items: center;
 }
-nav ul {
+header .search_botones nav ul {
   list-style-type: none;
 }
-nav ul li {
+header .search_botones nav ul li {
   display: inline-block;
   text-align: center;
   padding: 0.5rem;
 }
-nav ul li a {
+header .search_botones nav ul li a {
   color: #F1F2ED;
   background-color: #353535;
   font-size: 1rem;
@@ -120,7 +123,103 @@ nav ul li a {
   text-decoration: none;
   border-radius: 5px;
 }
+header .logo_contenedor {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo_contenedor .logo_diatoland {
+  height: 110px;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
 
+/* ------------------- HEADER Y FOOTER ------------------- */
+.boton_nav:hover {
+  background-color: black;
+}
+
+.search_botones .search .boton_search:hover {
+  background-color: black;
+}
+
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* ------------------- RESPONSIVE [1000 a 650]------------------- */
+@media (max-width: 900px) {
+  header {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas: "diato" "search_botones";
+    /* ------ LOGO ------ */
+  }
+  header .search_botones {
+    grid-area: search_botones;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "search" "botones";
+    justify-self: center;
+    /* ------ SEARCH ------ */
+    /* ------ NAV ------ */
+  }
+  header .search_botones .search {
+    grid-area: search;
+  }
+  header .search_botones nav {
+    grid-area: botones;
+  }
+  header .logo_contenedor {
+    grid-area: diato;
+  }
+  header .logo_contenedor .logo_diatoland {
+    height: 90px;
+  }
+}
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* ------------------- RESPONSIVE [650]------------------- */
+@media (max-width: 650px) {
+  header {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 0.2fr 0.5fr;
+    grid-template-areas: "diato" "search_botones";
+    /* ------ LOGO ------ */
+  }
+  header .search_botones {
+    grid-area: search_botones;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: "search" "botones";
+    justify-self: center;
+    /* ------ SEARCH ------ */
+    /* ------ NAV ------ */
+  }
+  header .search_botones .search {
+    grid-area: search;
+  }
+  header .search_botones nav {
+    grid-area: botones;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  header .search_botones nav ul li {
+    padding: 0.1rem;
+  }
+  header .search_botones nav ul li a {
+    font-size: 0.8rem;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  header .logo_contenedor .logo_diatoland {
+    height: 70px;
+  }
+}
 /* ------------------- FOOTER ------------------- */
 footer {
   background-color: #353535;
@@ -128,19 +227,18 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer div {
-  display: inline-block;
+footer .caja_footer {
+  /* display: inline-block */
   padding: 1rem;
   margin: 1rem;
   text-align: left;
 }
-footer div .op_footer {
-  background-color: #353535;
+footer .caja_footer .op_footer {
   color: #DFF2F1;
   font-size: 0.9rem;
   text-decoration: none;
 }
-footer div input {
+footer .caja_footer input {
   background-color: #DFF2F1;
   color: #353535;
   margin-top: 0.5rem;
@@ -149,19 +247,57 @@ footer div input {
   display: flex;
 }
 
+/* ------------------------- RESPONSIVE ------------------------- */
+/* ------ A TABLET ------ */
+/* ------ A CELULAR ------ */
+@media (max-width: 710px) {
+  body {
+    grid-template-rows: 0.5fr 3fr 1fr;
+  }
+  footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer .caja_footer {
+    padding: 1rem;
+    margin: 0rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* -------------------------------------- ANIMACIONES -------------------------------------- */
+.caja_footer .op_footer:hover {
+  color: #a8c5c3;
+}
+
+footer input:hover {
+  background-color: #BEDCDA;
+}
+
+/* ------------------- GRILLA ENVIOS ------------------- */
+.main_envios {
+  display: grid;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  grid-template-areas: "titulo" "contenido_1" "contenido_2";
+  row-gap: 0.5rem;
+}
+
+/* ------------------- GRAL ------------------- */
 .correo {
   grid-area: contenido_1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.correo_metodo, .retiro_metodo {
-  margin-left: 8rem;
-  margin-right: 8rem;
+.correo_metodo {
+  margin-left: 2rem;
+  margin-right: 2rem;
   padding-top: 1rem;
   margin-bottom: 2rem;
 }
-.correo_metodo p, .retiro_metodo p {
+.correo .correo_metodo p {
   text-align: center;
 }
 
@@ -172,11 +308,560 @@ footer div input {
   justify-content: center;
 }
 .retiro_metodo {
-  margin-left: 10;
-  margin-right: 10;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
 }
-.retiro_metodo p {
+.retiro .retiro_metodo p {
   text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 600px) {
+  .correo_metodo {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .correo .correo_metodo p {
+    text-align: left;
+  }
+  .retiro_metodo {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .retiro .retiro_metodo p {
+    text-align: left;
+  }
+}
+/* ------------------- GRILLAS PAGOS ------------------- */
+.main_pagos {
+  display: grid;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  grid-template-areas: "titulo" "contenido_1" "contenido_2";
+  row-gap: 0.5rem;
+}
+
+/* ------------------- GRAL ------------------- */
+.mp {
+  grid-area: contenido_1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mp_medio {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+.mp .mp_medio p {
+  text-align: center;
+}
+
+.transfer {
+  grid-area: contenido_2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.transfer_medio {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+.transfer .transfer_medio p {
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 600px) {
+  .mp_medio {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .mp .mp_medio p {
+    text-align: left;
+  }
+  .transfer_medio {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .transfer .transfer_medio p {
+    text-align: left;
+  }
+}
+/* ------------------- GRILLAS INDEX ------------------- */
+.main_index {
+  display: grid;
+  grid-template-rows: 0.2fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "titulo nada" "contenido_1 img_logos" "contenido_2 carrusel";
+  row-gap: 0.5rem;
+}
+
+/* ------------------- CONTENIDO ------------------- */
+.contenido_index_1 {
+  grid-area: contenido_1;
+  margin-left: 4rem;
+}
+.contenido_index_2 {
+  grid-area: contenido_2;
+  margin-left: 4rem;
+}
+.contenido_index_logos {
+  grid-area: img_logos;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+.contenido_index_logos .logo__fcasa {
+  height: 157px;
+  margin-right: 1rem;
+}
+.contenido_index_logos .logo__fminera {
+  height: 157px;
+}
+.contenido_index_carrusel {
+  grid-area: carrusel;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+.contenido_index_carrusel .foto__carrusel__1 {
+  height: 338px;
+}
+
+.caja_texto {
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------- */
+/* ---------------------- RESPONSIVE ----------------------- */
+/* --------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .main_index {
+    display: grid;
+    grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr 0.6fr;
+    grid-template-columns: 100%;
+    grid-template-areas: "titulo" "contenido_1" "logos" "contenido_2" "carrusel";
+    row-gap: 1rem;
+  }
+  .contenido_index_1 {
+    grid-area: contenido_1;
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+  }
+  .contenido_index_2 {
+    grid-area: contenido_2;
+    margin-right: 4rem;
+  }
+  .contenido_index_logos {
+    grid-area: logos;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenido_index_logos .logo__fcasa {
+    height: 157px;
+  }
+  .contenido_index_logos .logo__fminera {
+    height: 157px;
+  }
+  .contenido_index_carrusel {
+    grid-area: carrusel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenido_index_carrusel .foto__carrusel__1 {
+    height: 310px;
+  }
+  .caja_texto {
+    margin-bottom: 1rem;
+  }
+}
+/* ------------------- GRILLA UBICACIÓN CARDS ------------------- */
+.main_productos {
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "titulo nada" "contenido_1 contenido_2" "contenido_3 contenido_4";
+  row-gap: 0.5rem;
+}
+.main_productos .uno {
+  grid-area: contenido_1;
+  margin-left: 4rem;
+}
+.main_productos .dos {
+  grid-area: contenido_2;
+  margin-left: 4rem;
+}
+.main_productos .tres {
+  grid-area: contenido_3;
+  margin-left: 4rem;
+}
+.main_productos .cuatro {
+  grid-area: contenido_4;
+  margin-left: 4rem;
+}
+
+/* ------------------- GRILLA CONTENIDO CARDS ------------------- */
+.producto_card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 1fr;
+  grid-template-areas: "titulo foto" "precio foto" "descripcion foto";
+  row-gap: 0.5rem;
+  column-gap: 1rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+.producto_card .producto_titulo {
+  margin-bottom: 0.5rem;
+  grid-area: titulo;
+  margin-bottom: 1rem;
+}
+.producto_card .producto_precio {
+  color: #2FAD1A;
+  grid-area: precio;
+  margin-bottom: 1rem;
+}
+.producto_card .producto_descrip {
+  grid-area: descripcion;
+}
+.producto_card .producto_foto {
+  grid-area: foto;
+  border-radius: 5px;
+  height: 226px;
+  width: 226px;
+}
+
+/* ------------------- BOTÓN REALIZAR PEDIDO ------------------- */
+.realizar_pedido {
+  grid-area: nada;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.realizar_pedido_boton {
+  color: #BEDCDA;
+  text-decoration: none;
+  font-size: 1.25rem;
+  background-color: #353535;
+  border-radius: 5px;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: boton-pedido;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.realizar_pedido_boton:hover {
+  background-color: black;
+  transform: scale(105%);
+}
+
+@keyframes boton-pedido {
+  25% {
+    transform: scale(110%);
+  }
+  50% {
+    transform: scale(100%);
+  }
+  75% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+/* --------------------------------------------------------- */
+/* ---------------------- RESPONSIVE ----------------------- */
+/* --------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .main_productos {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 100%;
+    grid-template-areas: "titulo" "contenido_1" "contenido_2" "contenido_3" "contenido_4";
+    row-gap: 0.1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  .main_productos .uno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main_productos .dos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main_productos .tres {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main_productos .cuatro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main_productos .realizar_pedido {
+    grid-area: titulo;
+    margin-right: 3rem;
+  }
+  .main_productos .producto_foto {
+    height: 190px;
+    width: 190px;
+  }
+}
+/* ------------------- GRILLAS APLICACIONES ------------------- */
+.main_aplicaciones {
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "titulo nada" "contenido_1 contenido_2" "contenido_3 contenido_4";
+  row-gap: 0.5rem;
+}
+.main_aplicaciones .uno {
+  grid-area: contenido_1;
+  margin-bottom: 1rem;
+}
+.main_aplicaciones .dos {
+  grid-area: contenido_2;
+  margin-bottom: 1rem;
+}
+.main_aplicaciones .tres {
+  grid-area: contenido_3;
+}
+.main_aplicaciones .cuatro {
+  grid-area: contenido_4;
+}
+
+.card_aplicacion {
+  border: solid 2px #BEDCDA;
+  border-radius: 5px;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.card_aplicacion .aplicacion_caja_texto {
+  margin: 2rem;
+  display: inline-block;
+}
+.card_aplicacion .aplicacion_caja_texto .aplicacion_titulo {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 900px) {
+  .main_aplicaciones {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "contenido_1" "contenido_2" "contenido_3" "contenido_4";
+    row-gap: 0.1rem;
+  }
+}
+.main_contacto {
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 4fr;
+  grid-template-areas: "titulo" "contenido_1" "contenido_2" "contenido_3";
+  /* ---------- INFO WPP ---------- */
+  /* ---------- INFO MAIL ---------- */
+  /* ---------- CONTENEDOR FORMULARIOS ---------- */
+  /* -------------------------------------------------------- */
+  /* -------------------- FORMULARIO UNO -------------------- */
+  /* -------------------------------------------------------- */
+  /* -------------------- FORMULARIO DOS y TRES -------------------- */
+}
+.main_contacto .cont_wpp {
+  grid-area: contenido_1;
+}
+.main_contacto .cont_wpp .info_wpp {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  padding: 1rem;
+  background-color: #F6EEDA;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.main_contacto .cont_wpp .info_wpp .icono_wpp {
+  height: 70px;
+  width: 70px;
+}
+.main_contacto .cont_mail {
+  grid-area: contenido_2;
+}
+.main_contacto .cont_mail .info_mail {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  padding: 1rem;
+  background-color: #F6EEDA;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.main_contacto .cont_mail .info_mail .icono_mail {
+  height: 50px;
+  width: 50px;
+}
+.main_contacto .cont_forms {
+  grid-area: contenido_3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "form1 form2 form3";
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.main_contacto .formulario_uno {
+  grid-area: form1;
+  background-color: #FCF6E8;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 0.2fr 0.2fr;
+  grid-template-areas: "dato_producto" "dato_pago" "dato_envio";
+  row-gap: 0.5rem;
+}
+.main_contacto .formulario_uno .dato_producto {
+  grid-area: dato_producto;
+  display: flex;
+  flex-direction: column;
+}
+.main_contacto .formulario_uno .dato_pago {
+  grid-area: dato_pago;
+  display: flex;
+  flex-direction: column;
+}
+.main_contacto .formulario_uno .dato_envio {
+  grid-area: dato_envio;
+  display: flex;
+  flex-direction: column;
+}
+.main_contacto .titulo-form {
+  margin-bottom: 1rem;
+}
+.main_contacto .cont_select {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+.main_contacto .cont_select .prod {
+  margin-right: 0.5rem;
+}
+.main_contacto .cont_select select {
+  font-size: 1rem;
+  background-color: #F4EBD2;
+  margin-bottom: 0.2rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+.main_contacto .formulario_dos {
+  grid-area: form2;
+  background-color: #FCF6E8;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 2rem;
+}
+.main_contacto .formulario_tres {
+  grid-area: form3;
+  background-color: #FCF6E8;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.complet {
+  background-color: #F4EBD2;
+  font-size: 1rem;
+  background-color: #F4EBD2;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  width: 18rem;
+  display: flex;
+}
+
+.boton_enviar {
+  background-color: #353535;
+  color: #F4EBD2;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 1000px) {
+  .main_contacto {
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 4fr;
+    /* ---------- INFO WPP ---------- */
+    /* ---------- INFO MAIL ---------- */
+    /* ---------- FORMULARIOS ---------- */
+  }
+  .main_contacto .cont_wpp {
+    grid-area: contenido_1;
+  }
+  .main_contacto .cont_wpp .info_wpp {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .main_contacto .cont_mail {
+    grid-area: contenido_2;
+  }
+  .main_contacto .cont_mail .info_mail {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .main_contacto .cont_forms {
+    grid-area: contenido_3;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 2fr 2fr 2fr;
+    grid-template-areas: "form_uno" "form_dos" "form_tres";
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .main_contacto .formulario_uno {
+    grid-area: form_uno;
+  }
+  .main_contacto .formulario_dos {
+    grid-area: form_dos;
+  }
+  .main_contacto .formulario_tres {
+    grid-area: form_tres;
+  }
 }
 
 /*# sourceMappingURL=style_sass.css.map */

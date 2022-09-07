@@ -8,23 +8,22 @@
 
     <meta name="description" content="Tierras de diatomeas, el mejor fertilizante natural para tus plantas | Hacenos tu pedido">
 
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style_sass.css">
 
     <title> diatoland.com | Contacto </title>
 
 </head>
 <body>
-    <header class="header_index">
-
-        <div class="contenedor_logo">
-            <a href="../index.html"> <img src="../imagenes/diatoland_logo.svg" alt="logo" class="logo-diatoland"> </a> </h1>
+    <header>
+        <div class="logo_contenedor">
+            <a href="../index.html"> <img src="../imagenes/diatoland_logo.svg" alt="logo" class="logo_diatoland"></a>
         </div>
 
         <section class="search_botones">
 
             <div class="search">
                 <label for="search-nav"></label>
-                        <textarea cols="20" rows="1" id="search_nav" name="search-nav"> </textarea>
+                        <textarea cols="20" rows="1" id="search_nav" name="search-nav" class="input_search"> </textarea>
                         <input type="submit" value="Buscar" class="boton_search">
             </div>
 
@@ -61,121 +60,156 @@
             </p>
         </section>
 
-        <div class="cont_form">
+        <div class="cont_forms">
+
+            <!-------- FORMULARIO UNO ---------->
+
             <form class="formulario_uno">
-                <section class="datos_form">
+
+                <!-- PRODUCTOS Y CANTIDAD -->
+                
+                <section class="dato_producto">
                     <h3 class="titulo-form">Productos y Cantidad</h3>
 
-                        <div class="dato-form">
-                            <label for="usuario" class="prod"> Talquera por 500 gr </label>
-                            <select id= "contidad_producto" name = "cantidad-producto" class="selec">
-                                <option value="cantidad-0"> 0 </option>
-                                <option value="cantidad-1"> 1 </option>
-                                <option value="cantidad-2"> 2 </option>
-                                <option value="cantidad-3"> 3 </option>
+                    <div class="cont_select">
+                        <label for="usuario" class="prod"> Talquera por 500 gr </label>
+                        <select id= "contidad_producto" name = "cantidad-producto">
+                            <option value="cantidad-0"> 0 </option>
+                            <option value="cantidad-1"> 1 </option>
+                            <option value="cantidad-2"> 2 </option>
+                            <option value="cantidad-3"> 3 </option>
                         </select> 
-                        </div>
+                    </div>
 
-                        <div class="dato-form">
-                            <label for="usuario" class="prod"> Bolsa por 1 kilo </label>
-                            <select id= "contidad_producto" name = "cantidad-producto" class="selec">
-                                <option value="cantidad-0"> 0 </option>
-                                <option value="cantidad-1"> 1 </option>
-                                <option value="cantidad-2"> 2 </option>
-                                <option value="cantidad-3"> 3 </option>
+                    <div class="cont_select">
+                        <label for="usuario" class="prod"> Bolsa por 1 kilo </label>
+                        <select id= "contidad_producto" name = "cantidad-producto">
+                            <option value="cantidad-0"> 0 </option>
+                            <option value="cantidad-1"> 1 </option>
+                            <option value="cantidad-2"> 2 </option>
+                            <option value="cantidad-3"> 3 </option>
                         </select>
-                        </div>
+                    </div>
 
-                        <div class="dato-form">
-                            <label for="usuario" class="prod"> Bolsa por 3 kilos </label>
-                            <select id= "contidad_producto" name = "cantidad-producto" class="selec">
-                                <option value="cantidad-0"> 0 </option>
-                                <option value="cantidad-1"> 1 </option>
-                                <option value="cantidad-2"> 2 </option>
-                                <option value="cantidad-3"> 3 </option>
+                    <div class="cont_select">
+                        <label for="usuario" class="prod"> Bolsa por 3 kilos </label>
+                        <select id= "contidad_producto" name = "cantidad-producto">
+                            <option value="cantidad-0"> 0 </option>
+                            <option value="cantidad-1"> 1 </option>
+                            <option value="cantidad-2"> 2 </option>
+                            <option value="cantidad-3"> 3 </option>
                         </select>
-                        </div>
+                    </div>
 
-                        <div class="dato-form">
-                            <label for="usuario" class="prod"> Bolsa por 5 kilos </label>
-                            <select id= "contidad_producto" name = "cantidad-producto" class="selec">
-                                <option value="cantidad-0"> 0 </option>
-                                <option value="cantidad-1"> 1 </option>
-                                <option value="cantidad-2"> 2 </option>
-                                <option value="cantidad-3"> 3 </option>
+                    <div class="cont_select">
+                        <label for="usuario" class="prod"> Bolsa por 5 kilos </label>
+                        <select id= "contidad_producto" name = "cantidad-producto">
+                            <option value="cantidad-0"> 0 </option>
+                            <option value="cantidad-1"> 1 </option>
+                            <option value="cantidad-2"> 2 </option>
+                            <option value="cantidad-3"> 3 </option>
                         </select>
-                        </div>
+                    </div>     
                 </section>
 
-                <section class="datos_form">
+                <!-- MEDIOS DE PAGO -->
+
+                <section class="dato_pago">
                     <h3 class="titulo-form">Medio de Pago</h3>
-                        <div class="dato-form">
-                            <label for="pago-usuario"></label>
-                            <select id= "medio_pago" name = "medio-pago" class="selec">
-                                <option value="medio-1"> Mercado Pago </option>
-                                <option value="medio-2"> Transferencia Bancaria </option>
-                            </select>   
-                        </div>
+                    <div class="cont_select">
+                        <label for="pago-usuario"></label>
+                        <select id= "medio_pago" name = "medio-pago" class="selec_pago">
+                            <option value="medio-1"> Mercado Pago </option>
+                            <option value="medio-2"> Transferencia Bancaria </option>
+                        </select>   
+                    </div>
                 </section>
 
-                <section class="datos_form">
+                <!-- FORMA DE ENVIO -->
+
+                <section class="dato_envio">
                     <h3 class="titulo-form">Forma de Envío</h3>
-                        <div class="dato-form">
-                            <label for="envio-usuario"></label>
-                            <select id= "medio_envio" name = "medio-envio" class="selec">
-                                <option value="medio-1"> Correo Argentino </option>
-                                <option value="medio-2"> Retiro en punto de entrega - Las Cañitas</option>
-                            </select>   
-                        </div>    
+                    <div class="cont_select">
+                        <label for="envio-usuario"></label>
+                        <select id= "medio_envio" name = "medio-envio" class="selec_envio">
+                            <option value="medio-1"> Correo Argentino </option>
+                            <option value="medio-2"> Retiro en punto de entrega - Las Cañitas</option>
+                        </select>   
+                    </div>    
                 </section>
 
             </form>
 
+            <!-------- FORMULARIO DOS ---------->
+
             <form class="formulario_dos"> 
-                <section class="datos_form">
-                    <h3 class="titulo-form">Datos de contacto y envío</h3>
 
-                    <div class="dato-form">
-                        <label for="email-usuario" class="dat"> Email </label>
-                        <input type="email" id="email_usuario" name="email-usuario" class="complet">
+                    <!-- DATOS DE ENVIO -->
 
-                        <label for="celular-usuario" class="dat"> Celular </label>
-                        <input type="tel" id="celular_usuario" name="celular-usuario" class="complet">
-                    </div>
+                    <section class="datos_envio">
 
-                    <div class="dato-form">
-                        <label for="nombre-usuario" class="dat"> Nombre </label>
-                        <input type="text" id="nombre_usuario" name="nombre-usuario" class="complet">
+                        <h3 class="titulo-form">Datos de envío</h3>
 
-                        <label for="apellido-usuario" class="dat"> Apellido </label>
-                        <input type="text" id="apellido_usuario" name="apellido-usuario" class="complet">
-                    </div>
-                
-                    <div class="dato-form">
-                        <label for="calle-usuario" class="dat"> Calle </label>
-                        <input type="text" id="calle_usuario" name="calle-usuario" class="complet">
+                        <div class="dato_calle">
+                            <label for="calle-usuario" class="dat"> Calle </label>
+                            <input type="text" id="calle_usuario" name="calle-usuario" class="complet">
+                        </div>
 
-                        <label for="numeración-usuario" class="dat"> Numeración </label>
-                        <input type="text" id="numeración_usuario" name="numeración-usuario" class="complet">
+                        <div class="dato_numeracion">
+                            <label for="numeración-usuario" class="dat"> Numeración </label>
+                            <input type="text" id="numeración_usuario" name="numeración-usuario" class="complet">
+                        </div>
 
                         <!-- <textarea cols="8" rows="1" id="numeración_usuario" name="numeración-usuario" class="complet"> </textarea> -->
-                    </div>
 
-                    <div class="dato-form">
-                        <label for="ciudad-usuario" class="dat"> Ciudad </label>
-                        <input type="text" id="ciudad_usuario" name="ciudad-usuario" class="complet">
+                        <div class="dato_ciudad">
+                            <label for="ciudad-usuario" class="dat"> Ciudad </label>
+                            <input type="text" id="ciudad_usuario" name="ciudad-usuario" class="complet">
+                        </div>
 
-                        <label for="provincia-usuario" class="dat"> Provincia </label>
-                        <input type="text" id="provincia_usuario" name="provincia-usuario" class="complet">
-                    </div>
+                        <div class="dato_provincia">
+                            <label for="provincia-usuario" class="dat"> Provincia </label>
+                            <input type="text" id="provincia_usuario" name="provincia-usuario" class="complet">
+                        </div>
 
-                    <div class="dato-form">
-                        <label for="cp-usuario" class="dat"> Código Postal </label>
-                        <input type="text" id="cp_usuario" name="cp-usuario" class="complet">
+                        <div class="dato_cp">
+                            <label for="cp-usuario" class="dat"> Código Postal </label>
+                            <input type="text" id="cp_usuario" name="cp-usuario" class="complet">
+                        </div>
+                    </section>
+            </form>
+
+            <form class="formulario_tres">
+
+                    <!-- DATOS DE CONTACTO -->
+
+                    <section class="datos_contacto">
+
+                        <h3 class="titulo-form">Datos de contacto</h3>
+
+                        <div class="dato_mail">
+                            <label for="email-usuario" class="dat"> Email </label>
+                            <input type="email" id="email_usuario" name="email-usuario" class="complet">
+                        </div>
+
+                        <div class="dato_celular">
+                            <label for="celular-usuario" class="dat"> Celular </label>
+                            <input type="tel" id="celular_usuario" name="celular-usuario" class="complet">
+                        </div>
+
+                        <div class="dato_nombre">
+                            <label for="nombre-usuario" class="dat"> Nombre </label>
+                            <input type="text" id="nombre_usuario" name="nombre-usuario" class="complet">
+                        </div>
+
+                        <div class="dato_apellido">
+                            <label for="apellido-usuario" class="dat"> Apellido </label>
+                            <input type="text" id="apellido_usuario" name="apellido-usuario" class="complet">
+                        </div>
 
                         <input type="submit" value="Enviar" class="boton_enviar">
-                    </div>
-                </section>
+
+                    </section>
 
             </form>
         </div>
@@ -183,28 +217,27 @@
 
     <!-- --------------------------- -->
 
-    <footer class="footer_index">
-        <div clas="caja_footer">
-            <h3> <a href="../index.html" class="op_footer"> Quienes somos </a></h3>
-            <h3> <a href="../index.html" class="op_footer"> Preguntas frecuentes </a></h3>
-            <h3> <a href="./aplicaciones.html" class="op_footer"> Aplicaciones </a></h3>
+    <footer>
+        <div class="caja_footer">
+            <h2> <a href="../index.html" class="op_footer"> Quienes somos </a></h2>
+            <h2> <a href="../index.html" class="op_footer"> Preguntas frecuentes </a></h2>
+            <h2> <a href="./aplicaciones.html" class="op_footer"> Aplicaciones </a></h2>
         </div>
 
-        <div clas="caja_footer">
-            <h3> <a href="./pagos.html" class="op_footer"> Medios de pago </a></h3>
-            <h3> <a href="./envios.html" class="op_footer"> Formas de envío </a></h3>
-            <h3> <a href="./envios.html" class="op_footer"> Puntos de entrega </a></h3>
+        <div class="caja_footer">
+            <h2> <a href="./pagos.html" class="op_footer"> Medios de pago </a></h2>
+            <h2> <a href="./envios.html" class="op_footer"> Formas de envío </a></h2>
+            <h2> <a href="./envios.html" class="op_footer"> Puntos de entrega </a></h2>
         </div>
 
-        <div clas="caja_footer">
-            <h3> <a href="./contacto.html" class="op_footer"> Contacto </a></h3>
-            <h3> <a href=".contacto.html" class="op_footer"> Venta por mayor </a></h3>
+        <div class="caja_footer">
+            <h2> <a href="./contacto.html" class="op_footer"> Contacto </a></h2>
+            <h2> <a href=".contacto.html" class="op_footer"> Venta por mayor </a></h2>
+            <h2> <a href=".contacto.html" class="op_footer"> Venta por menor </a></h2>
         </div>
 
-        <div clas="caja_footer">
-            <h3 class="op_footer">Redes</h3>
-            <input type="submit" value="Pinterest">
-            <input type="submit" value="Twitter">
+        <div class="caja_footer">
+            <h2 class="op_footer">Redes</h2>
             <input type="submit" value="Instagram">
             <input type="submit" value="Facebook">
         </div>

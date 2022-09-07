@@ -1,0 +1,273 @@
+
+.main_contacto{
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 4fr;
+    grid-template-areas:
+    "titulo"
+    "contenido_1" 
+    "contenido_2"
+    "contenido_3"
+    ;
+
+  //  row-gap: 0.5rem; 
+
+  /* ---------- INFO WPP ---------- */
+
+  .cont_wpp{
+    grid-area: contenido_1;
+  
+    .info_wpp{
+      margin-left: 4rem;
+      margin-right: 4rem;
+      padding: 1rem;
+      background-color: #F6EEDA;
+      border-radius: 10px;
+    
+      display: flex;
+      align-items: center;
+  
+      .icono_wpp{
+        height: 70px;
+        width: 70px;
+      }
+    }
+  }
+
+  /* ---------- INFO MAIL ---------- */
+
+  .cont_mail{
+    grid-area: contenido_2;
+  
+    .info_mail{
+      margin-left: 4rem;
+      margin-right: 4rem;
+      padding: 1rem;
+      background-color: #F6EEDA;
+      border-radius: 10px;
+      
+      display: flex;
+      align-items: center;
+  
+      .icono_mail{
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+  
+  /* ---------- CONTENEDOR FORMULARIOS ---------- */
+
+  .cont_forms{
+
+    grid-area: contenido_3;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "form1 form2 form3";
+  
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+  }
+
+  
+
+/* -------------------------------------------------------- */
+/* -------------------- FORMULARIO UNO -------------------- */
+
+
+  .formulario_uno{
+
+    grid-area: form1;
+
+    background-color: #FCF6E8;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 2rem;
+  
+    display: grid;
+    grid-template-rows: 1fr 0.2fr 0.2fr;
+    grid-template-areas: "dato_producto" "dato_pago" "dato_envio";
+
+    row-gap: 0.5rem;
+
+    
+
+    .dato{
+      &_producto{
+        grid-area: dato_producto;
+
+        display: flex;
+        flex-direction: column;
+        
+      }
+  
+      &_pago{
+        grid-area: dato_pago;
+
+        display: flex;
+        flex-direction: column;
+      }
+  
+      &_envio{
+        grid-area: dato_envio;
+
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+      }
+    }
+  }
+
+
+  .titulo-form{
+    margin-bottom: 1rem;
+  }
+
+  .cont_select{
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+
+    .prod{
+      margin-right: 0.5rem;
+    }
+
+    select{
+      font-size: 1rem;
+      background-color: #F4EBD2;
+      margin-bottom: 0.2rem;
+      margin-right: 1rem;
+    
+      border-radius: 5px;
+    }
+  }
+
+
+
+/* -------------------------------------------------------- */
+/* -------------------- FORMULARIO DOS y TRES -------------------- */
+
+
+  .formulario_dos{
+
+    grid-area: form2;
+
+    background-color: #FCF6E8;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 2rem;
+    
+  }
+
+  .formulario_tres{
+
+    grid-area: form3;
+
+    background-color: #FCF6E8;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 2rem;
+    
+  }
+}
+
+
+.complet{
+  background-color: #F4EBD2;
+
+  font-size: 1rem;
+  background-color: #F4EBD2;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  // margin-left: 0.5rem;
+
+  border-radius: 5px;
+
+  width: 18rem;
+  
+  display: flex;
+}
+
+.boton_enviar{
+  background-color: #353535;
+  color: #F4EBD2;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 0.9rem;
+  
+  margin-top: 1rem;
+}
+
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (max-width: 1000px){
+
+  .main_contacto{
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 4fr;
+
+    /* ---------- INFO WPP ---------- */
+
+  .cont_wpp{
+    grid-area: contenido_1;
+  
+    .info_wpp{
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  /* ---------- INFO MAIL ---------- */
+
+  .cont_mail{
+    grid-area: contenido_2;
+  
+    .info_mail{
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  
+
+  
+  /* ---------- FORMULARIOS ---------- */
+
+    .cont_forms{
+
+      grid-area: contenido_3;
+    
+      display: grid;
+      grid-template-columns: none;
+      grid-template-rows: 2fr 2fr 2fr;
+      grid-template-areas: 
+      "form_uno" 
+      "form_dos" 
+      "form_tres"
+      ;
+    
+      margin-left: 1rem;
+      margin-right: 1rem;
+  
+    }
+
+    .formulario_uno{
+
+      grid-area: form_uno;
+    } 
+
+    .formulario_dos{
+      grid-area: form_dos;  
+    }
+
+    .formulario_tres{
+      grid-area: form_tres;
+  
+    }
+  }
+    
+}
+  

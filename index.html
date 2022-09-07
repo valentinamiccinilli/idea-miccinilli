@@ -8,7 +8,7 @@
 
     <meta name="description" content="Tierras de diatomeas, el mejor fertilizante natural para tus plantas | Conocé sobre nosotros">
 
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style_sass.css">
 
     <title> diatoland.com | Información </title>
 
@@ -16,17 +16,16 @@
 
 
 <body class="body_index">
-    <header class="header_index">
-
-        <div class="contenedor_logo">
-            <a href="./index.html"> <img src="./imagenes/diatoland_logo.svg" alt="logo" class="logo-diatoland"> </a> </h1>
+    <header>
+        <div class="logo_contenedor">
+            <a href="../index.html"> <img src="../imagenes/diatoland_logo.svg" alt="logo" class="logo_diatoland"> </a>
         </div>
 
         <section class="search_botones">
 
             <div class="search">
                 <label for="search-nav"></label>
-                        <textarea cols="20" rows="1" id="search_nav" name="search-nav"> </textarea>
+                        <textarea cols="20" rows="1" id="search_nav" name="search-nav" class="input_search"> </textarea>
                         <input type="submit" value="Buscar" class="boton_search">
             </div>
 
@@ -42,33 +41,30 @@
             </nav>
 
         </section>
-
     </header>
 
-    <main class="main_index">
-        <h2>Información</h2>
+    <main class="main_index contenido">
+        
+        <h1>Información</h1>
 
         <section class="contenido_index_1">
             <article class="caja_texto">
-                <h3>¿Quienes somos?</h3>
+                <h2>¿Quienes somos?</h2>
                 <p>
-                    Diatoland es una empresa familiar fundada en el año 2000 que tiene como objetivo la adquisición y redistrubución de Tierras de Diatomeas. 
-                    Obtenemos la diatomea más pura y refinada de latinoamérica, debido a que no hay procesos químicos entre la extracción y la venta del mineral.
-                    Somos pioneros en la aplicación a gran escala como fertilizante natural para los cultivos en plantaciones o campos. 
+                    Diatoland es una empresa familiar fundada en el año 2000 que tiene como objetivo la adquisición y redistrubución de Tierras de Diatomeas en toda América Latina. 
                 </p>
-
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem pariatur voluptas nemo beatae modi neque nobis facilis 
-                    non possimus sapiente incidunt tenetur, est quisquam minus perferendis molestiae tempore alias. Voluptas!
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem pariatur voluptas nemo beatae modi neque nobis facilis 
-                    non possimus sapiente incidunt tenetur, est quisquam minus perferendis molestiae tempore alias. Voluptas!
-                 </p>
+                    Obtenemos la diatomea más pura y refinada de latinoamérica. La calidad que posee es debido a que no se realizan procesos químicos entre la extracción y la venta del mineral.
+                </p>
+                <p>
+                    Somos pioneros en la aplicación a gran escala como fertilizante natural para los cultivos en plantaciones o campos. Evitando así la utilización de agroquímicos letales para la salud.
+                </p>
             </article>
         </section>
 
         <section class="contenido_index_2">
             <article class="caja_texto">
-                <h3>¿Qué es la tierra de diatomeas?</h3>
+                <h2>¿Qué es la tierra de diatomeas?</h2>
                 <p>
                     Las diatomeas son algas marinas fosilizadas que se utilizan en forma de tierra y con distintos usos, 
                     como fertilizantes orgánicos y naturales o insecticidas ecológicos para los cultivos, entre muchos 
@@ -77,16 +73,14 @@
                 </p>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem pariatur voluptas nemo beatae modi neque nobis facilis 
-                    non possimus sapiente incidunt tenetur, est quisquam minus perferendis molestiae tempore alias. Voluptas!
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem pariatur voluptas nemo beatae modi neque nobis facilis 
-                    non possimus sapiente incidunt tenetur, est quisquam minus perferendis molestiae tempore alias. Voluptas!
+                    Formaban el fitoplancton marino de hace miles de años, en la Prehistoria, pero no solo estaban presentes en los mares, sino también en el agua dulce. Por tanto, las Diatomeas son de los primeros organismos que habitaron la Tierra.
+                    Con el tiempo, al secarse los mares y lagos, estas algas formaron asentamientos en sus fondos y, con la acumulación de capas de tierra con el tiempo, continuaron fosilizando sus exoesqueletos de sílice. Es por esta razón que podemos encontrar Diatomeas bajo varias capas de tierra en diversos sitios donde antes existió algún mar o lago. Debido a su alto contenido en silicio orgánico y calcio adquieren esa coloración de tierra blanca.
                  </p>
 
             </article>
 
             <article class="caja_texto">
-                <h3>¿Qué propiedades y beneficios tiene?</h3>
+                <h2>¿Qué propiedades y beneficios tiene?</h2>
                 <p>
                     Las diatomeas son el componente más importante de la bomba biológica de carbono, que produce un secuestro 
                     del CO2 en forma de materia orgánica y de su hundimiento como nieve marina a grandes profundidades oceánicas.
@@ -98,23 +92,23 @@
                 </p>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem pariatur voluptas nemo beatae modi neque nobis facilis 
-                    non possimus sapiente incidunt tenetur, est quisquam minus perferendis molestiae tempore alias. Voluptas!
-                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem pariatur voluptas nemo beatae modi neque nobis facilis 
-                    non possimus sapiente incidunt tenetur, est quisquam minus perferendis molestiae tempore alias. Voluptas!
+                    Aunque los suelos de cultivo ya presentan sus macronutrientes, si no contamos con la presencia de algunos micronutrientes, 
+                    las plantas no serán capaces de asimilarlos. Las tierras de Diatomeas aportan micronutrientes importantes al suelo y permiten 
+                    que las plantas puedan asimilar otros macronutriente presentes en el suelo. En concreto, la tierra de diatomeas ayuda a la 
+                    asimilación de fósforo, nitrógeno y potasio.
                 </p>
 
             </article>
         </section>
 
-        <section class="imagenes_index_logos">
+        <section class="contenido_index_logos">
             <div class="img_logos">
                 <img src="./imagenes/logo_fcasa.jpg" alt="logo" class="logo__fcasa">
                 <img src="./imagenes/logo_fminera.jpg" alt="logo" class="logo__fminera">
             </div>
         </section>
 
-        <section class="imagenes_index_carrusel">
+        <section class="contenido_index_carrusel">
             <div class="carrusel_fotos">
                 <img src="./imagenes/foto_carrusel_uno.jpg" alt="producto" class="foto__carrusel__1">
             </div>
@@ -123,28 +117,27 @@
 
     
 
-    <footer class="footer_index">
-        <div clas="caja_footer">
-            <h3> <a href="./index.html" class="op_footer"> Quienes somos </a></h3>
-            <h3> <a href="./index.html" class="op_footer"> Preguntas frecuentes </a></h3>
-            <h3> <a href="./pages/aplicaciones.html" class="op_footer"> Aplicaciones </a></h3>
+    <footer>
+        <div class="caja_footer">
+            <h2> <a href="./index.html" class="op_footer"> Quienes somos </a></h2>
+            <h2> <a href="./index.html" class="op_footer"> Preguntas frecuentes </a></h2>
+            <h2> <a href="./pages/aplicaciones.html" class="op_footer"> Aplicaciones </a></h2>
         </div>
 
-        <div clas="caja_footer">
-            <h3> <a href="./pages/pagos.html" class="op_footer"> Medios de pago </a></h3>
-            <h3> <a href="./pages/envios.html" class="op_footer"> Formas de envío </a></h3>
-            <h3> <a href="./pages/envios.html" class="op_footer"> Puntos de entrega </a></h3>
+        <div class="caja_footer">
+            <h2> <a href="./pages/pagos.html" class="op_footer"> Medios de pago </a></h2>
+            <h2> <a href="./pages/envios.html" class="op_footer"> Formas de envío </a></h2>
+            <h2> <a href="./pages/envios.html" class="op_footer"> Puntos de entrega </a></h2>
         </div>
 
-        <div clas="caja_footer">
-            <h3> <a href="./pages/contacto.html" class="op_footer"> Contacto </a></h3>
-            <h3> <a href="./pages/contacto.html" class="op_footer"> Venta por mayor </a></h3>
+        <div class="caja_footer">
+            <h2> <a href="./pages/contacto.html" class="op_footer"> Contacto </a></h2>
+            <h2> <a href="./pages/contacto.html" class="op_footer"> Venta por mayor </a></h2>
+            <h2> <a href="./pages/contacto.html" class="op_footer"> Venta por menor </a></h2>
         </div>
 
-        <div clas="caja_footer">
-            <h3 class="op_footer">Redes</h3>
-            <input type="submit" value="Pinterest">
-            <input type="submit" value="Twitter">
+        <div class="caja_footer">
+            <h2 class="op_footer">Redes</h2>
             <input type="submit" value="Instagram">
             <input type="submit" value="Facebook">
         </div>
