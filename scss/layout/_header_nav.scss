@@ -1,0 +1,221 @@
+header{
+    background-color: #BEDCDA;
+
+    display: grid;
+    grid-template-columns: 0.5fr 3.5fr 0.5fr;
+    grid-template-areas: "logo contenido nada";
+
+    .search_botones{
+        grid-area: contenido;
+    
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "search" "botones";
+        justify-self: center;
+
+        /* ------ SEARCH ------ */
+
+        .search{
+            text-align: center;
+            grid-area: search;
+        
+            display: flex;
+            align-items: center;
+            justify-self: center;
+
+            .boton_search{
+                background-color: #353535;
+                color: #F1F2ED;
+                margin-left: 1rem;
+                border-radius: 3px;
+                padding: 2px;
+            }
+
+            .input_search{
+                border-radius: 5px;
+                background-color: #DFF2F1;
+
+                height: 1.2rem;
+                width: 10rem;
+            }
+        }
+
+        /* ------ NAV ------ */
+
+        nav{
+            grid-area: botones;
+            display: flex;
+            align-items: center;
+        
+            ul{
+                list-style-type: none;
+        
+                li{
+                    display:inline-block;
+                    text-align:center;
+                
+                    padding: 0.5rem;
+        
+                    a{
+                        color: #F1F2ED;
+                        background-color: #353535;
+                    
+                        font-size: 1rem;
+                        padding: 6px;
+                        text-decoration:none;
+                    
+                        border-radius: 5px;
+                    }
+                }      
+            }
+        }
+    }
+
+    /* ------ LOGO ------ */
+
+    .logo_contenedor{
+        grid-area: logo;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .logo_diatoland{
+            height: 110px;
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+        }
+    }
+
+}
+
+/* ------------------- HEADER Y FOOTER ------------------- */
+
+.boton_nav:hover{
+    background-color: black;
+  }
+
+  .search_botones{
+    .search{
+        .boton_search:hover{
+          background-color: black;
+        }
+      }
+
+  }
+
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* ------------------- RESPONSIVE [1000 a 650]------------------- */
+
+@media (max-width: 900px){
+
+    header{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 0.2fr 1fr;
+        grid-template-areas: "diato" "search_botones";
+    
+        .search_botones{
+            grid-area: search_botones;
+            
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "search" "botones";
+            justify-self: center;
+    
+            /* ------ SEARCH ------ */
+    
+            .search{
+                grid-area: search;
+            }
+    
+            /* ------ NAV ------ */
+    
+            nav{
+                grid-area: botones;
+            }
+        }
+    
+        /* ------ LOGO ------ */
+    
+        .logo_contenedor{
+            grid-area: diato;
+            
+            .logo_diatoland{
+                height: 90px;
+            }
+        }
+    
+    }
+
+}
+
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* ------------------- RESPONSIVE [650]------------------- */
+
+@media (max-width: 650px){
+
+    header{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 0.2fr 0.5fr;
+        grid-template-areas: "diato" "search_botones";
+    
+        .search_botones{
+            grid-area: search_botones;
+            
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: 4fr 1fr;
+            grid-template-areas: "search" "botones";
+            justify-self: center;
+    
+            /* ------ SEARCH ------ */
+    
+            .search{
+                grid-area: search;
+            }
+    
+            /* ------ NAV ------ */
+    
+            nav{
+                grid-area: botones;
+
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            
+                ul{
+                    li{
+                        padding: 0.1rem;
+                        a{
+                        
+                            font-size: 0.8rem;
+                            padding: 4px;
+                        
+                            border-radius: 5px;
+                        }
+                    }      
+                }
+            }
+        }
+    
+        /* ------ LOGO ------ */
+    
+        .logo_contenedor{
+            .logo_diatoland{
+                height: 70px;
+            }
+        }
+    
+    }
+
+}
+
+
+
+

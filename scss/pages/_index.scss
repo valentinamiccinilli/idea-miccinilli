@@ -1,0 +1,136 @@
+
+/* ------------------- GRILLAS INDEX ------------------- */
+
+.main_index{
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "titulo nada"
+    "contenido_1 img_logos"
+    "contenido_2 carrusel"
+    ;
+  
+    row-gap: 0.5rem;
+  }
+
+/* ------------------- CONTENIDO ------------------- */
+
+  .contenido{
+    &_index_1{
+      grid-area: contenido_1;
+      margin-left: 4rem;
+    
+    }
+    
+    &_index_2{
+      grid-area: contenido_2;
+      margin-left: 4rem;
+    
+    }
+    
+    &_index_logos{
+      grid-area: img_logos;
+    
+      display: flex;
+      justify-content: center;
+      align-items: top;
+  
+      .logo__fcasa{
+        height: 157px;
+        margin-right: 1rem;
+      }
+      
+      .logo__fminera{
+        height: 157px;
+      }
+    }
+    
+    &_index_carrusel{
+      grid-area: carrusel;
+    
+      display: flex;
+      justify-content: center;
+      align-items: top;
+  
+      .foto__carrusel__1{
+        height: 338px;
+      }
+    }
+  }
+
+  .caja_texto{
+    margin-bottom: 1rem;
+  }
+
+
+/* --------------------------------------------------------- */
+/* ---------------------- RESPONSIVE ----------------------- */
+/* --------------------------------------------------------- */
+
+@media (max-width: 1000px){
+
+  .main_index{
+    display: grid;
+    grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr 0.6fr;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "titulo"
+    "contenido_1"
+    "logos"
+    "contenido_2"
+    "carrusel"
+    ;  
+    row-gap: 1rem;
+}
+
+.contenido{
+  &_index_1{
+    grid-area: contenido_1;  
+
+    display: flex;
+    align-items: center ;
+
+    margin-right: 4rem;
+  }
+  
+  &_index_2{
+    grid-area: contenido_2;
+    margin-right: 4rem;
+  }
+  
+  &_index_logos{
+    grid-area: logos;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo__fcasa{
+      height: 157px;
+    }
+    
+    .logo__fminera{
+      height: 157px;
+    }
+  }
+  
+  &_index_carrusel{
+    grid-area: carrusel;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .foto__carrusel__1{
+      height: 310px;
+    }
+  }
+}
+
+.caja_texto{
+  margin-bottom: 1rem;
+}
+
+}
+

@@ -1,0 +1,82 @@
+/* ------------------- FOOTER ------------------- */
+
+footer{
+    background-color: #353535;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .caja_footer{
+        
+        /* display: inline-block */
+    
+        padding: 1rem;
+        margin: 1rem;
+        text-align: left; 
+
+            .op_footer{
+                color: #DFF2F1;
+                font-size: 0.9rem;
+                text-decoration: none;
+             }
+        
+            input{
+                background-color: #DFF2F1;
+                color: #353535;
+                margin-top: 0.5rem;
+                padding: 0.1rem;
+                border-radius: 5px;
+        
+                display: flex;
+            }
+
+        }     
+    
+}
+
+/* ------------------------- RESPONSIVE ------------------------- */
+
+/* ------ A TABLET ------ */
+
+
+/* ------ A CELULAR ------ */
+
+@media (max-width: 710px){
+
+    body{
+        grid-template-rows: 0.5fr 3fr 1fr;
+    }
+
+    footer{
+
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .caja_footer{
+
+            padding: 1rem;
+            margin: 0rem;
+            text-align: center; 
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            } 
+    }
+}
+
+/* -------------------------------------- ANIMACIONES -------------------------------------- */
+
+  .caja_footer{
+    .op_footer:hover{
+      color: #a8c5c3;
+    }
+  }
+  
+  footer input:hover{
+    background-color: #BEDCDA;
+  }
+
+
+

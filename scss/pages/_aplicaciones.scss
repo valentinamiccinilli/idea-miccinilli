@@ -1,0 +1,84 @@
+/* ------------------- GRILLAS APLICACIONES ------------------- */
+
+.main_aplicaciones{
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "titulo nada"
+    "contenido_1 contenido_2"
+    "contenido_3 contenido_4"
+    ;
+  
+    row-gap: 0.5rem;
+
+    .uno{
+      grid-area: contenido_1;
+      margin-bottom: 1rem;
+    
+    }
+    
+    .dos{
+      grid-area: contenido_2;
+      margin-bottom: 1rem;
+    
+    }
+    
+    .tres{
+      grid-area: contenido_3;
+    
+    }
+    
+    .cuatro{
+      grid-area: contenido_4;
+    
+    }
+  }
+  
+ 
+  .card_aplicacion{
+    border: solid 2px #BEDCDA;
+    border-radius: 5px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+  
+    display: flex;
+    align-items: center;
+
+    .aplicacion_caja_texto{
+  
+      margin: 2rem;
+  
+      display: inline-block;
+
+      .aplicacion_titulo{
+        margin-bottom: 1.5rem;
+      
+        text-align:center;
+      }
+    }
+  }
+  
+/* -------------------------------------------------- */
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (max-width: 900px){
+
+  .main_aplicaciones{
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "titulo"
+    "contenido_1"
+    "contenido_2"
+    "contenido_3" 
+    "contenido_4"
+    ;
+
+    row-gap: 0.1rem;
+}
+
+}
+  

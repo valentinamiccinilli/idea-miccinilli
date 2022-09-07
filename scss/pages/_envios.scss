@@ -1,0 +1,101 @@
+/* ------------------- GRILLA ENVIOS ------------------- */
+
+.main_envios{
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas:
+    "titulo"
+    "contenido_1" 
+    "contenido_2"
+    ;
+
+    row-gap: 0.5rem;
+}
+
+
+/* ------------------- GRAL ------------------- */
+
+.correo{
+    grid-area: contenido_1;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_metodo{
+
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 1rem;
+        
+        margin-bottom: 2rem;
+
+    }
+
+    .correo_metodo p{
+        text-align: center;
+      }
+}
+  
+.retiro{
+    grid-area: contenido_2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_metodo{
+
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 1rem;
+        
+        margin-bottom: 2rem;
+        
+    }
+
+    .retiro_metodo p{
+        text-align: center;
+      }
+  
+}
+
+
+/* -------------------------------------------------- */
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (max-width: 600px){
+
+    .correo{
+        &_metodo{
+    
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-top: 1rem;
+            
+            margin-bottom: 1rem;
+    
+        }
+    
+        .correo_metodo p{
+            text-align: left;
+          }
+    }
+      
+    .retiro{
+        &_metodo{
+    
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-top: 1rem;
+            
+            margin-bottom: 1rem;
+            
+        }
+    
+        .retiro_metodo p{
+            text-align: left;
+          }
+      
+    }
+}
+

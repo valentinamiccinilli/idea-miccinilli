@@ -1,0 +1,103 @@
+/* ------------------- GRILLAS PAGOS ------------------- */
+
+.main_pagos{
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas:
+    "titulo"
+    "contenido_1" 
+    "contenido_2"
+    ;
+
+    row-gap: 0.5rem;
+  }
+
+  /* ------------------- GRAL ------------------- */
+
+.mp{
+    grid-area: contenido_1;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_medio{
+
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 1rem;
+        
+        margin-bottom: 2rem;
+    }
+
+    .mp_medio p{
+        text-align: center;
+      }
+}
+  
+.transfer{
+    grid-area: contenido_2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_medio{
+
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 1rem;
+        
+        margin-bottom: 2rem;
+        
+    }
+
+    .transfer_medio p{
+        text-align: center;
+      }
+  
+}
+
+/* -------------------------------------------------- */
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (max-width: 600px){
+
+    .mp{
+        &_medio{
+    
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-top: 1rem;
+            
+            margin-bottom: 1rem;
+    
+        }
+    
+        .mp_medio p{
+            text-align: left;
+          }
+    }
+      
+    .transfer{
+        &_medio{
+    
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-top: 1rem;
+            
+            margin-bottom: 1rem;
+            
+        }
+    
+        .transfer_medio p{
+            text-align: left;
+          }
+      
+    }
+}
+
+
+
+  
+ 
+  
