@@ -11,6 +11,7 @@
     ;
   
     row-gap: 0.5rem;
+    padding: 2rem;
 
     .uno{
       grid-area: contenido_1;
@@ -57,8 +58,24 @@
       
         text-align:center;
       }
+
+      .icono_planta{
+        height: 6rem;
+        margin-top: 2rem;
+        margin-left: 42%  
+      }
+
+      .icono_planta:hover{
+
+        animation-name: icono-planta;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+
+        transform: scale(115%);
+      }
     }
   }
+
   
 /* -------------------------------------------------- */
 /* ------------------- RESPONSIVE ------------------- */

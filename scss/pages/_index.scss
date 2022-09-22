@@ -1,129 +1,114 @@
-
 /* ------------------- GRILLAS INDEX ------------------- */
 
 .main_index{
-    display: grid;
-    grid-template-rows: 0.2fr 1fr 2fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "titulo nada"
-    "contenido_1 img_logos"
-    "contenido_2 carrusel"
-    ;
-  
-    row-gap: 0.5rem;
-  }
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 0.3fr;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  "hero"
+  "info_1" 
+  "foto__diatomea"
+  ;
+
+  row-gap: 0.5rem;
+}
+
+.cont_hero{
+  grid-area: hero;
+
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  "titulo"
+  "info_diato" 
+  "logos"
+  ;
+
+  background-color: #bedcda3b;
+  padding-bottom: 3rem;
+}
 
 /* ------------------- CONTENIDO ------------------- */
 
-  .contenido{
-    &_index_1{
-      grid-area: contenido_1;
-      margin-left: 4rem;
-    
-    }
-    
-    &_index_2{
-      grid-area: contenido_2;
-      margin-left: 4rem;
-    
-    }
-    
-    &_index_logos{
-      grid-area: img_logos;
-    
-      display: flex;
-      justify-content: center;
-      align-items: top;
-  
-      .logo__fcasa{
-        height: 157px;
-        margin-right: 1rem;
-      }
-      
-      .logo__fminera{
-        height: 157px;
-      }
-    }
-    
-    &_index_carrusel{
-      grid-area: carrusel;
-    
-      display: flex;
-      justify-content: center;
-      align-items: top;
-  
-      .foto__carrusel__1{
-        height: 338px;
-      }
-    }
-  }
-
-  .caja_texto{
-    margin-bottom: 1rem;
-  }
-
-
-/* --------------------------------------------------------- */
-/* ---------------------- RESPONSIVE ----------------------- */
-/* --------------------------------------------------------- */
-
-@media (max-width: 1000px){
-
-  .main_index{
-    display: grid;
-    grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr 0.6fr;
-    grid-template-columns: 100%;
-    grid-template-areas:
-    "titulo"
-    "contenido_1"
-    "logos"
-    "contenido_2"
-    "carrusel"
-    ;  
-    row-gap: 1rem;
-}
 
 .contenido{
-  &_index_1{
-    grid-area: contenido_1;  
 
-    display: flex;
-    align-items: center ;
-
+  h1{
+    margin-bottom: 2rem;
+    margin-top: 4rem;
     margin-right: 4rem;
+    grid-area: titulo;
+    color: #84AFAB;
+    font-size: 2rem;
+
+    // text-align: center;
+  }
+
+  &_index_1{
+    margin-right: 4rem;
+    margin-left: 4rem;
+    grid-area: info_diato;
+
+    .ver_productos{
+      background-color: #84AFAB;
+      color: #F1F2ED;
+      padding: 0.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .ver_productos:hover{
+      background-color: #F1F2ED;
+      box-shadow: 0.1rem 0.1rem 0.5rem 0.08rem #84AFAB;
+      color: #84AFAB;
+    }
+  
   }
   
   &_index_2{
-    grid-area: contenido_2;
+    grid-area: info_1;
+    margin-left: 4rem;
     margin-right: 4rem;
+    margin-top: 2rem;
+  
   }
   
   &_index_logos{
     grid-area: logos;
+    margin-top: 2rem;
   
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
 
     .logo__fcasa{
       height: 157px;
+      margin-right: 1rem;
+
+      border-radius: 20px;
+      box-shadow: 0.1rem 0.1rem 0.5rem 0.08rem #84AFAB;
     }
     
     .logo__fminera{
       height: 157px;
+      border-radius: 20px;
+      box-shadow: 0.1rem 0.1rem 0.5rem 0.08rem #412a2a;
     }
   }
   
-  &_index_carrusel{
-    grid-area: carrusel;
+  &_index_foto{
+    grid-area: foto__diatomea;
   
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
 
-    .foto__carrusel__1{
-      height: 310px;
+    .foto__diatomea__1{
+      height: 338px;
+      border-radius: 20px;
+      box-shadow: 0.1rem 0.1rem 0.4rem 0.07rem #6e7776;
+      margin-bottom: 2rem;
     }
   }
 }
@@ -132,5 +117,43 @@
   margin-bottom: 1rem;
 }
 
+/* ---------------------- RESPONSIVE ----------------------- */
+/* --------------------------------------------------------- */
+
+@media (max-width: 800px){
+
+  .main_index{
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.3fr;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "hero"
+    "info_1" 
+    "foto__diatomea"
+    ;
+  
+    row-gap: 0.5rem;
+  }
+
+  .contenido{
+    &_index_logos{
+      .logo__fcasa{
+        height: 100px;
+        margin-top: 2rem;
+      }
+      
+      .logo__fminera{
+        height: 100px;
+        margin-top: 2rem;
+      }
+    }
+    
+    &_index_foto{
+      .foto__diatomea__1{
+        height: 238px;
+      }
+    }
+  }
 }
+  
 

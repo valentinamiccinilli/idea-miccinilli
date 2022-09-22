@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
     <meta name="description" content="Tierras de diatomeas, el mejor fertilizante natural para tus plantas | Conocé sobre nosotros">
 
@@ -18,7 +17,7 @@
 <body class="body_index">
     <header>
         <div class="logo_contenedor">
-            <a href="../index.html"> <img src="../imagenes/diatoland_logo.svg" alt="logo" class="logo_diatoland"> </a>
+            <a href="../index.html"> <img src="./imagenes/diatoland_logo.svg" alt="logo" class="logo_diatoland"> </a>
         </div>
 
         <section class="search_botones">
@@ -26,14 +25,14 @@
             <div class="search">
                 <label for="search-nav"></label>
                         <textarea cols="20" rows="1" id="search_nav" name="search-nav" class="input_search"> </textarea>
-                        <input type="submit" value="Buscar" class="boton_search">
+                        <a href="" class="boton_search">Buscar</a>
             </div>
 
             <nav>
                 <ul>
+                    <li> <a href="./index.html" class="boton_nav"> Diatoland </a> </li>
                     <li> <a href="./pages/productos.html" class="boton_nav"> Productos </a> </li>
                     <li> <a href="./pages/aplicaciones.html" class="boton_nav"> Aplicaciones </a> </li>
-                    <li> <a href="./index.html" class="boton_nav"> Información </a> </li>
                     <li> <a href="./pages/pagos.html" class="boton_nav"> Pagos </a> </li>
                     <li> <a href="./pages/envios.html" class="boton_nav"> Envíos </a> </li>
                     <li> <a href="./pages/contacto.html" class="boton_nav"> Contacto </a> </li>
@@ -44,24 +43,38 @@
     </header>
 
     <main class="main_index contenido">
-        
-        <h1>Información</h1>
 
-        <section class="contenido_index_1">
-            <article class="caja_texto">
-                <h2>¿Quienes somos?</h2>
-                <p>
-                    Diatoland es una empresa familiar fundada en el año 2000 que tiene como objetivo la adquisición y redistrubución de Tierras de Diatomeas en toda América Latina. 
-                </p>
-                <p>
-                    Obtenemos la diatomea más pura y refinada de latinoamérica. La calidad que posee es debido a que no se realizan procesos químicos entre la extracción y la venta del mineral.
-                </p>
-                <p>
-                    Somos pioneros en la aplicación a gran escala como fertilizante natural para los cultivos en plantaciones o campos. Evitando así la utilización de agroquímicos letales para la salud.
-                </p>
-            </article>
+        <section class="cont_hero">
+
+            <h1>Tierra de Diatomeas</h1>
+
+            <section class="contenido_index_1">
+                <article class="caja_texto">
+                    <h2>¿Qué es Diatoland?</h2>
+                    <p>
+                        Diatoland es una empresa familiar fundada en el año 2000 que tiene como objetivo la adquisición y redistrubución de Tierras de Diatomeas en toda América Latina. 
+                    </p>
+                    <p>
+                        Obtenemos la diatomea más pura y refinada de latinoamérica. La calidad que posee es debido a que no se realizan procesos químicos entre la extracción y la venta del mineral.
+                    </p>
+                    <p>
+                        Somos pioneros en la aplicación a gran escala como fertilizante natural para los cultivos en plantaciones o campos. Evitando así la utilización de agroquímicos letales para la salud.
+                    </p>
+
+                    <br>
+                </article>
+
+                </h3><a href="./pages/productos.html" class="ver_productos"> Ver productos </a></h3>
+            </section>
+
+            <section class="contenido_index_logos">
+                <div class="img_logos">
+                    <img src="./imagenes/logo_fcasa.jpg" alt="logo" class="logo__fcasa">
+                    <img src="./imagenes/logo_fminera.jpg" alt="logo" class="logo__fminera">
+                </div>
+            </section>
         </section>
-
+        
         <section class="contenido_index_2">
             <article class="caja_texto">
                 <h2>¿Qué es la tierra de diatomeas?</h2>
@@ -101,16 +114,12 @@
             </article>
         </section>
 
-        <section class="contenido_index_logos">
-            <div class="img_logos">
-                <img src="./imagenes/logo_fcasa.jpg" alt="logo" class="logo__fcasa">
-                <img src="./imagenes/logo_fminera.jpg" alt="logo" class="logo__fminera">
-            </div>
-        </section>
+        
 
-        <section class="contenido_index_carrusel">
-            <div class="carrusel_fotos">
-                <img src="./imagenes/foto_carrusel_uno.jpg" alt="producto" class="foto__carrusel__1">
+
+        <section class="contenido_index_foto">
+            <div class="diatomea_fotos">
+                <img src="./imagenes/foto_diatomea_uno.jpg" alt="producto" class="foto__diatomea__1">
             </div>
         </section>
     </main>
@@ -137,9 +146,8 @@
         </div>
 
         <div class="caja_footer">
-            <h2 class="op_footer">Redes</h2>
-            <input type="submit" value="Instagram">
-            <input type="submit" value="Facebook">
+            <a href="" class="boton_red">Instagram</a>
+            <a href="" class="boton_red">Facebook</a>
         </div>
     </footer>
 </body>

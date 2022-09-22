@@ -21,12 +21,13 @@ footer{
                 text-decoration: none;
              }
         
-            input{
+             .boton_red{
                 background-color: #DFF2F1;
                 color: #353535;
                 margin-top: 0.5rem;
-                padding: 0.1rem;
+                padding: 0.2rem;
                 border-radius: 5px;
+                font-size: 0.9rem;
         
                 display: flex;
             }
@@ -74,7 +75,7 @@ footer{
     }
   }
   
-  footer input:hover{
+  footer .boton_red:hover{
     background-color: #BEDCDA;
   }
 

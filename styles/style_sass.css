@@ -54,7 +54,6 @@ p {
 
 .caja_centrada {
   margin-bottom: 2rem;
-  background-color: #FCF6E8;
   margin-left: 4rem;
   margin-right: 4rem;
   border-radius: 15px;
@@ -95,6 +94,8 @@ header .search_botones .search .boton_search {
   margin-left: 1rem;
   border-radius: 3px;
   padding: 2px;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 header .search_botones .search .input_search {
   border-radius: 5px;
@@ -238,12 +239,13 @@ footer .caja_footer .op_footer {
   font-size: 0.9rem;
   text-decoration: none;
 }
-footer .caja_footer input {
+footer .caja_footer .boton_red {
   background-color: #DFF2F1;
   color: #353535;
   margin-top: 0.5rem;
-  padding: 0.1rem;
+  padding: 0.2rem;
   border-radius: 5px;
+  font-size: 0.9rem;
   display: flex;
 }
 
@@ -272,7 +274,7 @@ footer .caja_footer input {
   color: #a8c5c3;
 }
 
-footer input:hover {
+footer .boton_red:hover {
   background-color: #BEDCDA;
 }
 
@@ -282,6 +284,7 @@ footer input:hover {
   grid-template-rows: 0.2fr 1fr 1fr;
   grid-template-areas: "titulo" "contenido_1" "contenido_2";
   row-gap: 0.5rem;
+  padding: 2rem;
 }
 
 /* ------------------- GRAL ------------------- */
@@ -345,6 +348,7 @@ footer input:hover {
   grid-template-rows: 0.2fr 1fr 1fr;
   grid-template-areas: "titulo" "contenido_1" "contenido_2";
   row-gap: 0.5rem;
+  padding: 2rem;
 }
 
 /* ------------------- GRAL ------------------- */
@@ -405,23 +409,57 @@ footer input:hover {
 /* ------------------- GRILLAS INDEX ------------------- */
 .main_index {
   display: grid;
-  grid-template-rows: 0.2fr 1fr 2fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "titulo nada" "contenido_1 img_logos" "contenido_2 carrusel";
+  grid-template-rows: 1fr 0.5fr 0.3fr;
+  grid-template-columns: 100%;
+  grid-template-areas: "hero" "info_1" "foto__diatomea";
   row-gap: 0.5rem;
 }
 
+.cont_hero {
+  grid-area: hero;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  grid-template-columns: 100%;
+  grid-template-areas: "titulo" "info_diato" "logos";
+  background-color: rgba(190, 220, 218, 0.231372549);
+  padding-bottom: 3rem;
+}
+
 /* ------------------- CONTENIDO ------------------- */
+.contenido h1 {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  margin-right: 4rem;
+  grid-area: titulo;
+  color: #84AFAB;
+  font-size: 2rem;
+}
 .contenido_index_1 {
-  grid-area: contenido_1;
+  margin-right: 4rem;
   margin-left: 4rem;
+  grid-area: info_diato;
+}
+.contenido_index_1 .ver_productos {
+  background-color: #84AFAB;
+  color: #F1F2ED;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.contenido_index_1 .ver_productos:hover {
+  background-color: #F1F2ED;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.08rem #84AFAB;
+  color: #84AFAB;
 }
 .contenido_index_2 {
-  grid-area: contenido_2;
+  grid-area: info_1;
   margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 2rem;
 }
 .contenido_index_logos {
-  grid-area: img_logos;
+  grid-area: logos;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: top;
@@ -429,108 +467,99 @@ footer input:hover {
 .contenido_index_logos .logo__fcasa {
   height: 157px;
   margin-right: 1rem;
+  border-radius: 20px;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.08rem #84AFAB;
 }
 .contenido_index_logos .logo__fminera {
   height: 157px;
+  border-radius: 20px;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.08rem #412a2a;
 }
-.contenido_index_carrusel {
-  grid-area: carrusel;
+.contenido_index_foto {
+  grid-area: foto__diatomea;
   display: flex;
   justify-content: center;
   align-items: top;
 }
-.contenido_index_carrusel .foto__carrusel__1 {
+.contenido_index_foto .foto__diatomea__1 {
   height: 338px;
+  border-radius: 20px;
+  box-shadow: 0.1rem 0.1rem 0.4rem 0.07rem #6e7776;
+  margin-bottom: 2rem;
 }
 
 .caja_texto {
   margin-bottom: 1rem;
 }
 
-/* --------------------------------------------------------- */
 /* ---------------------- RESPONSIVE ----------------------- */
 /* --------------------------------------------------------- */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .main_index {
     display: grid;
-    grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr 0.6fr;
+    grid-template-rows: 0.5fr 0.5fr 0.3fr;
     grid-template-columns: 100%;
-    grid-template-areas: "titulo" "contenido_1" "logos" "contenido_2" "carrusel";
-    row-gap: 1rem;
-  }
-  .contenido_index_1 {
-    grid-area: contenido_1;
-    display: flex;
-    align-items: center;
-    margin-right: 4rem;
-  }
-  .contenido_index_2 {
-    grid-area: contenido_2;
-    margin-right: 4rem;
-  }
-  .contenido_index_logos {
-    grid-area: logos;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-template-areas: "hero" "info_1" "foto__diatomea";
+    row-gap: 0.5rem;
   }
   .contenido_index_logos .logo__fcasa {
-    height: 157px;
+    height: 100px;
+    margin-top: 2rem;
   }
   .contenido_index_logos .logo__fminera {
-    height: 157px;
+    height: 100px;
+    margin-top: 2rem;
   }
-  .contenido_index_carrusel {
-    grid-area: carrusel;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .contenido_index_carrusel .foto__carrusel__1 {
-    height: 310px;
-  }
-  .caja_texto {
-    margin-bottom: 1rem;
+  .contenido_index_foto .foto__diatomea__1 {
+    height: 238px;
   }
 }
 /* ------------------- GRILLA UBICACIÓN CARDS ------------------- */
 .main_productos {
   display: grid;
-  grid-template-rows: 0.5fr 2fr 2fr;
+  grid-template-rows: 0.5fr 2fr 2fr 0.5fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "titulo nada" "contenido_1 contenido_2" "contenido_3 contenido_4";
+  grid-template-areas: "titulo nada" "contenido_1 contenido_2" "contenido_3 contenido_4" "comprar comprar";
   row-gap: 0.5rem;
+  padding: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.main_productos h1 {
+  margin-left: 1rem;
 }
 .main_productos .uno {
   grid-area: contenido_1;
-  margin-left: 4rem;
 }
 .main_productos .dos {
   grid-area: contenido_2;
-  margin-left: 4rem;
 }
 .main_productos .tres {
   grid-area: contenido_3;
-  margin-left: 4rem;
 }
 .main_productos .cuatro {
   grid-area: contenido_4;
-  margin-left: 4rem;
 }
 
 /* ------------------- GRILLA CONTENIDO CARDS ------------------- */
 .producto_card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 0.1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.3fr;
   grid-template-areas: "titulo foto" "precio foto" "descripcion foto";
   row-gap: 0.5rem;
   column-gap: 1rem;
   margin-bottom: 0.5rem;
   align-items: center;
+  border: solid 2px #BEDCDA;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-left: 1rem;
+  background-color: #f7f8f7;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.08rem #BEDCDA;
 }
 .producto_card .producto_titulo {
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
   grid-area: titulo;
   margin-bottom: 1rem;
 }
@@ -547,15 +576,17 @@ footer input:hover {
   border-radius: 5px;
   height: 226px;
   width: 226px;
+  margin-left: 1rem;
 }
 
 /* ------------------- BOTÓN REALIZAR PEDIDO ------------------- */
 .realizar_pedido {
-  grid-area: nada;
-  margin-right: 1rem;
+  grid-area: comprar;
+  margin-right: 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
 }
 .realizar_pedido_boton {
   color: #BEDCDA;
@@ -563,10 +594,10 @@ footer input:hover {
   font-size: 1.25rem;
   background-color: #353535;
   border-radius: 5px;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -599,40 +630,12 @@ footer input:hover {
 @media (max-width: 1000px) {
   .main_productos {
     display: grid;
-    grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr;
-    grid-template-columns: 100%;
-    grid-template-areas: "titulo" "contenido_1" "contenido_2" "contenido_3" "contenido_4";
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "contenido_1" "contenido_2" "contenido_3" "contenido_4" "comprar";
     row-gap: 0.1rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-  .main_productos .uno {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .main_productos .dos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .main_productos .tres {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .main_productos .cuatro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .main_productos .realizar_pedido {
-    grid-area: titulo;
-    margin-right: 3rem;
-  }
-  .main_productos .producto_foto {
-    height: 190px;
-    width: 190px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 /* ------------------- GRILLAS APLICACIONES ------------------- */
@@ -642,6 +645,7 @@ footer input:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "titulo nada" "contenido_1 contenido_2" "contenido_3 contenido_4";
   row-gap: 0.5rem;
+  padding: 2rem;
 }
 .main_aplicaciones .uno {
   grid-area: contenido_1;
@@ -675,6 +679,17 @@ footer input:hover {
   margin-bottom: 1.5rem;
   text-align: center;
 }
+.card_aplicacion .aplicacion_caja_texto .icono_planta {
+  height: 6rem;
+  margin-top: 2rem;
+  margin-left: 42%;
+}
+.card_aplicacion .aplicacion_caja_texto .icono_planta:hover {
+  animation-name: icono-planta;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transform: scale(115%);
+}
 
 /* -------------------------------------------------- */
 /* ------------------- RESPONSIVE ------------------- */
@@ -691,6 +706,7 @@ footer input:hover {
   display: grid;
   grid-template-rows: 0.5fr 0.5fr 0.5fr 4fr;
   grid-template-areas: "titulo" "contenido_1" "contenido_2" "contenido_3";
+  padding: 2rem;
   /* ---------- INFO WPP ---------- */
   /* ---------- INFO MAIL ---------- */
   /* ---------- CONTENEDOR FORMULARIOS ---------- */
@@ -810,6 +826,7 @@ footer input:hover {
 
 .boton_enviar {
   background-color: #353535;
+  text-decoration: none;
   color: #F4EBD2;
   border-radius: 5px;
   padding: 2px;

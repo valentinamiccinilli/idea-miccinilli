@@ -3,38 +3,40 @@
 
 .main_productos{
     display: grid;
-    grid-template-rows: 0.5fr 2fr 2fr;
+    grid-template-rows: 0.5fr 2fr 2fr 0.5fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "titulo nada"
     "contenido_1 contenido_2"
     "contenido_3 contenido_4"
+    "comprar comprar"
     ;
   
     row-gap: 0.5rem;
+    padding: 2rem;
+
+    margin-left: 4rem;
+    margin-right: 4rem;
+
+    h1{
+      margin-left: 1rem;
+    }
 
 
     .uno{
       grid-area: contenido_1;
-      margin-left: 4rem;
-
     }
     
     .dos{
       grid-area: contenido_2;
-      margin-left: 4rem;
     }
     
     .tres{
       grid-area: contenido_3;
-      margin-left: 4rem;
-
     }
     
     .cuatro{
       grid-area: contenido_4;
-      margin-left: 4rem;
-    
     }
   }
   
@@ -44,7 +46,7 @@
     display: grid;
   
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr ;
+    grid-template-rows: 0.1fr 0.1fr 0.3fr ;
     grid-template-areas:
     "titulo foto"
     "precio foto"
@@ -57,10 +59,19 @@
 
     align-items: center;
 
+    border: solid 2px #BEDCDA;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-left: 1rem;
+
+    background-color: #f7f8f7;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.08rem #BEDCDA;
+
+
     .producto{
 
       &_titulo{
-        margin-bottom: 0.5rem;
+        margin-top: 1rem;
       
         grid-area: titulo;
         margin-bottom: 1rem;
@@ -83,6 +94,8 @@
   
         height: 226px;
         width: 226px;
+
+        margin-left: 1rem;
       }
     }
   }
@@ -90,12 +103,13 @@
   /* ------------------- BOTÓN REALIZAR PEDIDO ------------------- */
 
   .realizar_pedido{
-    grid-area: nada;
-    margin-right: 1rem;
+    grid-area: comprar;
+    margin-right: 2rem;
+    padding: 1rem;
   
     display: flex;
     align-items: center; 
-    justify-content: right;
+    justify-content: center;
 
     &_boton{
 
@@ -107,10 +121,10 @@
       background-color: #353535;
       border-radius: 5px;
     
-      padding-top: 0.3rem;
-      padding-bottom: 0.3rem;
-      padding-left: 0.4rem;
-      padding-right: 0.4rem;
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     
       display: flex;
       justify-content: center;
@@ -162,56 +176,22 @@
 
   .main_productos{
       display: grid;
-      grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr;
-      grid-template-columns: 100%;
+      grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
+      grid-template-columns: 1fr;
       grid-template-areas:
       "titulo"
       "contenido_1"
       "contenido_2"
       "contenido_3" 
       "contenido_4"
+      "comprar"
       ;
   
       row-gap: 0.1rem;
 
-      margin-left: 4rem;
-      margin-right: 4rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
   
-    .uno{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .dos{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-  
-    .tres{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-  
-    .cuatro{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    .realizar_pedido{
-      grid-area: titulo;
-      margin-right: 3rem;
-      
-    } 
-
-    .producto_foto{
-        height: 190px;
-        width: 190px;
-      }
-    }
+  }
 
 }
